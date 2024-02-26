@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="shortcut icon" type="image/jpg" href="../img/logo.png">
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+  <main class="">
+          <div style="background-color: rgba(0, 0, 0, 0.696); height: 70vh;;">
+              <video autoplay muted loop id="myVideo2">
+                  <source src="../img/video.mp4" type="video/mp4">
+              </video>
+              <header>
+                  <nav class="navbar navbar-expand-lg m-0 p-0">
+                      <div class="container-fluid">
+                          <a href="../index.html" class="">
+                              <img src="../img/logo.png" class="logo" alt="logo" style="width: 95px;">
+                          </a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                              aria-expanded="false" aria-label="Toggle navigation">
+                              <i class="bi bi-list text-white"></i>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                  <li class="nav-item">
+                                      <a class="nav-link" aria-current="page" href="index.html">Página Inicial</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" aria-current="page"
+                                          href="paginas/portfolio.html">Portfólio</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="paginas/orcamento.html">Orçamento</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="paginas/produtos.html">Produtos</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </nav>
+              </header>
+              <section>
+                <div class="container pb-5 pt-3 container-orcamento">
+                  <div class="row">
+                    <div class="col-12 bg-light row formulario">
+                      <div class="col-lg-6 col-md-12 align-self-center">
+                        <div class="text-center px-5 pb-5 pt-3">
+                          <h2 class="mt-3 text-dark"><b>Consumo</b></h2>
+                          <div class="col-md-12 col-12 mb-3 mt-1">
+                            <input id="consumo" type="number" placeholder="Coloque seu kWh/mês*" class="" min="0">
+                          </div>
+                          <div class="col-md-12 col-12 mb-3 mt-1">
+                            <input id="resultado" type="text" class="" placeholder="Quantidade de kits" min="0.00" value="" disabled>
+                          </div>
+                          <div class="col-md-12 col-12 mb-3 mt-1">
+                            <input id="resultadoV" type="text" class="" placeholder="Valor (11500 x kits)" min="0.00" value="" disabled>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12">
+                        <div class="text-center px-5 pt-3">
+                          <h2 class="text-dark mt-3"><b>Cadastro</b></h2>
+                          <div class="row">
+                            <div class="col-md-12 col-12 mb-3 mt-1">
+                              <input type="text" id="nome" class="" pattern="[A-Z-a-z]+" placeholder="Nome*">
+                            </div>
+                            <div class="col-md-12 col-12 mb-3 mt-1">
+                              <input type="text" id="sobrenome" class="" placeholder="Sobrenome*">
+                            </div>
+                            <div class="col-md-12 col-12 mb-3 mt-1">
+                              <input type="text" id="telefone" placeholder="Telefone*" class="">
+                            </div>
+                            <div class="col-md-12 col-12 mb-3 mt-1">
+                              <input type="email" id="email" placeholder="Email*" class="">
+                            </div>
+                            <div class="col-md-12 col-12 mb-1 mt-1">
+                              <textarea class="" id="obs" rows="3" placeholder="Deixe sua obervação aqui."></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 pb-4 row text-center justify-content-center">
+                        <p id="mensagem" class="text-danger"><br></p>
+                        <button id="cadastro" class="button-class col-4 ">Cadastrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+
+
+      
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content ">
+          <div class="text-center pt-3 border-0">
+            <h5 class="modal-title" id="exampleModalLabel"><b>Obrigado pela confiança</b></h5>
+          </div>
+          <div class="modal-body text-center">
+            <div class="pt-3">
+              <p>Somos a melhor empresa do bairro do caio em guaratinguetas</p>
+            </div>
+          </div>
+          <div class="modal-footer text-center justify-content-center border-0">
+            <button onclick="location.href='../index.html'" type="button" class="btn btn-success"
+              data-bs-dismiss="modal">Continuar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="fundo" class="bg-footer text-center text-white footer navbar-fixed-bottom">
+      <!-- Grid container -->
+      <div class="container p-3 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light border-footer btn-floating m-1" href="#!" role="button"><i
+              class="bi bi-facebook icons-footer"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light border-footer btn-floating m-1" href="#!" role="button"><i
+              class="bi bi-twitter icons-footer"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-outline-light border-footer btn-floating m-1" href="#!" role="button"><i
+              class="bi bi-google icons-footer"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light border-footer btn-floating m-1" href="#!" role="button"><i
+              class="bi bi-instagram icons-footer"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light border-footer btn-floating m-1" href="#!" role="button"><i
+              class="bi bi-linkedin icons-footer"></i></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light border-footer btn-floating m-1" href="#!" role="button"><i
+              class="bi bi-github icons-footer"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgb(23, 23, 23);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </div>
+    </footer>
+
+    <!-- Fim do footer -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/orcamento/orcamentojs.js"></script>
+    <script src="../js/JqueryMask/dist/jquery.mask.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('#telefone').mask('(00) 0000-00009');
+      });
+
+    </script>
+
+</body>
+
+</html>
